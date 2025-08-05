@@ -54,7 +54,7 @@ export default {
 				sign: signature,
 				msg_type: "text",
 				content: {
-					text: '<at user_id="all">所有人</at>，每周要记得喝理智药水',
+					text: '<at user_id="all">所有人</at>，这周的理智药水喝了吗？',
 				},
 			});
 

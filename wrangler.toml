@@ -9,4 +9,5 @@ compatibility_date = "2025-08-05"
 enabled = true
 
 [triggers]
-crons = ["30 20 * * SUN,SAT"]
+# UTC timestamp, correspond to 20:30 UTC+8 every Sunday & Saturday
+crons = ["30 12 * * SUN,SAT"]
