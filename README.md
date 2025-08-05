@@ -34,7 +34,7 @@
 4. 根据需要修改 Cloudflare Workers 中的配置。主要包括：
 
    - 触发事件 > Cron 触发器：设置定时任务的执行频率，注意表达式是 UTC 时间，默认为每周六、周日的 12:30，即北京时间每周六、周日的 20:30
-   - 变量和机密 > 添加：设置消息模板 ID 和版本（可选），默认模板文件可在 [template.json](./template.json) 中找到
+   - 变量和机密 > 添加：设置消息模板 ID 和版本（可选），默认模板文件可在 [template.json](./template.json) 中找到，可在飞书开发者平台的[卡片搭建工具](https://open.feishu.cn/cardkit)中导入、编辑和测试
 
 ## 后续开发计划
 
