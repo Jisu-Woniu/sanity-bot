@@ -48,7 +48,7 @@ export default {
 		try {
 			const date = new Date();
 			const timestamp = date.valueOf() / 1000;
-			const signature = await sign(timestamp, env.SECRET);
+			const signature = await sign(timestamp, env.SECRET ?? "");
 			const body = JSON.stringify({
 				timestamp: timestamp.toString(),
 				sign: signature,
