@@ -25,7 +25,7 @@ function toBase64(buffer: ArrayBuffer) {
 
 async function sign(timestamp: number, secret: string): Promise<string> {
 	const keyData = new TextEncoder().encode(`${timestamp}\n${secret}`);
-	const key = (await crypto.subtle.importKey(
+	const key = await crypto.subtle.importKey(
 		"raw",
 		keyData,
 		{
@@ -34,7 +34,7 @@ async function sign(timestamp: number, secret: string): Promise<string> {
 		},
 		false,
 		["sign", "verify"],
-	)) as CryptoKey;
+	);
 
 	const signature = await crypto.subtle.sign("HMAC", key, new Uint8Array());
 
