@@ -49,12 +49,24 @@ export default {
 			const date = new Date();
 			const timestamp = date.valueOf() / 1000;
 			const signature = await sign(timestamp, env.SECRET ?? "");
+			const formattedTime = Intl.DateTimeFormat("zh-CN", {
+				dateStyle: "full",
+				timeStyle: "medium",
+				timeZone: "Asia/Shanghai",
+			}).format(date);
 			const body = JSON.stringify({
 				timestamp: timestamp.toString(),
 				sign: signature,
-				msg_type: "text",
-				content: {
-					text: '<at user_id="all">所有人</at>，这周的理智药水喝了吗？',
+
+				msg_type: "interactive",
+				card: {
+					type: "template",
+					data: {
+						template_id: env.template_id,
+						template_version_name: env.template_version_name,
+						// TODO: Make `template_variable` customizable
+						template_variable: { time: formattedTime },
+					},
 				},
 			});
 
