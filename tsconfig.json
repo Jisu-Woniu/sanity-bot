@@ -1,0 +1,21 @@
+{
+	"compilerOptions": {
+		"target": "es2021",
+		"lib": ["es2021"],
+
+		"module": "es2022",
+		"moduleResolution": "node",
+		"resolveJsonModule": true,
+
+		"noEmit": true,
+
+		"isolatedModules": true,
+		"forceConsistentCasingInFileNames": true,
+
+		"strict": true,
+
+		/* Skip type checking all .d.ts files. */
+		"skipLibCheck": true,
+		"types": ["./worker-configuration.d.ts"]
+	}
+}

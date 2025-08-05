@@ -1,0 +1,12 @@
+# For more details on how to configure Wrangler, refer to:
+# https://developers.cloudflare.com/workers/wrangler/configuration/
+"$schema" = "node_modules/wrangler/config-schema.json"
+name = "sanity-bot"
+main = "src/index.ts"
+compatibility_date = "2025-08-05"
+
+[observability]
+enabled = true
+
+[triggers]
+crons = ["30 20 * * SUN,SAT"]
