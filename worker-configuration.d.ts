@@ -3,8 +3,8 @@
 // Runtime types generated with workerd@1.20250803.0 2025-08-05
 declare namespace Cloudflare {
 	interface Env {
-		template_id: "AAqzHkj1V1v95";
-		template_version_name: "1.0.2";
+		template_id: string;
+		template_version_name: string;
 		WEBHOOK_URL: string;
 		SECRET?: string;
 	}
